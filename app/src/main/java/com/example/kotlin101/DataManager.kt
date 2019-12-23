@@ -1,12 +1,13 @@
 package com.example.kotlin101
 
-class DataManager {
+object DataManager {
 
     val courses = HashMap<String, CourseInfo>()
     val notes = ArrayList<NoteInfo>()
 
     init {
         initializeCourses()
+        initializeNotes()
     }
 
     private fun initializeCourses() {
@@ -21,6 +22,11 @@ class DataManager {
 
         course = CourseInfo("java_core", "Android Async Programming and Services")
         courses.set(course.courseId,course)
+    }
+
+    private fun initializeNotes() {
+        notes.add(NoteInfo(courses.get("android_intents")!!, "My Android Intents Note", "This is an android note."))
+        notes.add(NoteInfo(courses.get("java_lang")!!, "My Java Note", "This is a note."))
     }
 
 }

@@ -27,6 +27,9 @@ object DataManager {
     private fun initializeNotes() {
         notes.add(NoteInfo(courses.get("android_intents")!!, "My Android Intents Note", "This is an android note."))
         notes.add(NoteInfo(courses.get("java_lang")!!, "My Java Note", "This is a note."))
+        notes.add(NoteInfo(courses.get("java_lang")!!, "My Java Note 2 ", "This is a note but version 2."))
     }
+
+
 
 }
